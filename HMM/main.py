@@ -7,5 +7,5 @@ input_num = len(input_data)
 output_file = 'test.txt'
 for i in range(input_num):
     pre_show(i,input_data[i])
-    (out_str, out_score) = prep(input_data[i])
-    post_show(out_str,out_score)
+    out_str  = prep(input_data[i])
+    post_show(out_str)
