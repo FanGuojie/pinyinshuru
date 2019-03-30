@@ -10,11 +10,9 @@ def readJson(filename):
 
 EMISSION_FILE = "./data/emission.json"
 TRANSITION_FILE = "./data/transition.json"
-INIT_FILE = "./data/init.json"
 PINYIN_FILE = "./data/pinyin.json"
 emission = readJson(EMISSION_FILE)
 transition = readJson(TRANSITION_FILE)
-init = readJson(INIT_FILE)
 pin = readJson(PINYIN_FILE)
 
 

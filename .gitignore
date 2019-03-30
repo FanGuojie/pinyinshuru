@@ -1,5 +1,6 @@
 /拼音*
 拼音*
-/sina_news*
+/sina_news/*.json *.txt
+/sina_news_gbk/
 *.pdf
 /news_pkl/*.pkl
