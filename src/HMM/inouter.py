@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def Input(filename):
     input_data = []
     with open(filename, 'r', encoding='UTF-8') as f:

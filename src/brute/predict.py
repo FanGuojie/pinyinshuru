@@ -1,4 +1,3 @@
-import numpy as np
 from loadfile import load_pinyin
 from loadfile import load_character
 from random import randint
