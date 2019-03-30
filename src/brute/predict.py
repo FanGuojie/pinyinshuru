@@ -16,7 +16,7 @@ def get_random(word_size):
     ran = []
     size=word_size
     while word_size:
-        i = randint(1,4)
+        i = randint(1,2)
         ran.append(i)
         word_size -= i
         if word_size<0:
@@ -47,6 +47,7 @@ def get_word(words):
     dfs(num, words, words_p, "")
     # print(words_p)
     str = max(words_p, key=words_p.get)
+    # print(str)
     score=words_p[str]
     threhold=2
     fail=(score<threhold)
@@ -62,10 +63,10 @@ def prep(input_data):
     for i in range(word_size):
         characters = pinyin_dict[input_data[i]]
         word.append(characters)
-    total=100
+    total=word_size*50
     for i in range(int(total)):
-        if i%5==0:
-            print("progress : %d / %d" %(i,total))
+        # if i%25==0:
+        #     print("progress : %d / %d" %(i,total))
         ran = get_random(word_size)
         if tuple(ran) in rans:
             continue
@@ -94,8 +95,11 @@ def prep(input_data):
             p[strs] = scores
 
 
-
-    res_str = max(p, key=p.get)
+    try:
+        res_str = max(p, key=p.get)
+    except Exception as e:
+        res_str="输入太长"
+        return(res_str,0)
     res_score = p[res_str]
 
     return (res_str, res_score)

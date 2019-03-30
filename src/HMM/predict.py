@@ -15,7 +15,6 @@ emission = readJson(EMISSION_FILE)
 transition = readJson(TRANSITION_FILE)
 pin = readJson(PINYIN_FILE)
 
-
 def vertebi_2gram(c, p, sec, em=1):
     nxt = transition[c]
     for n in nxt:
