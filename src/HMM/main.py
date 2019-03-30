@@ -15,7 +15,7 @@ else:
     print("请输入 输入文件和输出文件地址，都不输入则用默认参数")
 input_data = Input(input_file)
 input_num = len(input_data)
-for ngram in range(2,3):
+for ngram in range(2,4):
     print("word %d-gram model:" %ngram)
     out=[]
     for i in range(input_num):
