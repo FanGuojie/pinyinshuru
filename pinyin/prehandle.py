@@ -50,7 +50,7 @@ def accurateHandle(hanzi):
     sens=listLoad('sentences.txt')
     num=len(sens)
     i=0
-    total=num
+    total=20000
     for s in sens[:total]:
         i+=1
         if i%100==0:
@@ -78,7 +78,11 @@ def accurateHandle(hanzi):
     for w in multip:
         s=sum(hanzi[w].values())
         for k in hanzi[w]:
-            hanzi[w][k]/=s
+            hanzi[w][k]-=1
+            try:
+                hanzi[w][k]/=s-len(hanzi[w])
+            except Exception as e:
+                hanzi[w][k]/=s
 
 
 
