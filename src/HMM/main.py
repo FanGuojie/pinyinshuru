@@ -3,7 +3,7 @@ from predict import prep
 from show import pre_show,post_show
 import sys
 # output_ngram=int(input("您想尝试几元模型（2~4）"))
-output_ngram=3
+output_ngram=2
 if len(sys.argv)==1:
     input_file = '../input.txt'
     output_file = './test.txt'
@@ -15,7 +15,7 @@ else:
     print("请输入 输入文件和输出文件地址，都不输入则用默认参数")
 input_data = Input(input_file)
 input_num = len(input_data)
-for ngram in range(2,6):
+for ngram in range(2,3):
     print("word %d-gram model:" %ngram)
     out=[]
     for i in range(input_num):
