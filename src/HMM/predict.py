@@ -13,16 +13,16 @@ EMISSION_FILE = "./data/emission.json"
 GRAM2_FILE = "./data/transition.json"
 # GRAM3_FILE = "./data/transition3.json"
 # GRAM4_FILE = "./data/transition4.json"
-GRAM3_FILE = "./data/gram3.json"
+# GRAM3_FILE = "./data/gram3.json"
 # GRAM4_FILE = "./data/gram4.json"
 PINYIN_FILE = "./data/pinyin.json"
 emission = readJson(EMISSION_FILE)
 gram2 = readJson(GRAM2_FILE)
-gram3 = readJson(GRAM3_FILE)
+# gram3 = readJson(GRAM3_FILE)
 # gram4 = readJson(GRAM4_FILE)
 pin = readJson(PINYIN_FILE)
-# gram_transition = [gram2]
-gram_transition = [gram2, gram3]
+gram_transition = [gram2]
+# gram_transition = [gram2, gram3]
 # gram_transition = [gram2, gram3, gram4]
 def test():
     print(gram3["我上"]['上学'])
@@ -64,8 +64,11 @@ def sub_gram(pinyin, ngram):
         for i in range(ngram-1):
             em *= emission[f[i]][pre_yin[i]]
         dfs(p, pinyin, ngram-1, f, em, ngram)
-    return max(p, key=p.get)
-
+    try:
+        return max(p, key=p.get)
+    except Exception as e:
+        print( str(ngram)+"元模型不能描述")
+        return sub_gram(pinyin,2)
 
 def gram(pinyin, ngram):
     num = len(pinyin)
