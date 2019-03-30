@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Input	inputer.py	/^def Input(filename):$/;"	f
+character_couter	predict.py	/^character_couter = load_character()$/;"	v
+dfs	predict.py	/^def dfs(n,words,word_p,str):$/;"	f
+filename	inputer.py	/^    filename='..\/input.txt'$/;"	v
+get_random	predict.py	/^def get_random(word_size):$/;"	f
+get_word	predict.py	/^def get_word(words):$/;"	f
+input_data	inputer.py	/^    input_data=Input(filename)$/;"	v
+input_data	main.py	/^input_data=Input(input_file)$/;"	v
+input_file	main.py	/^input_file='..\/input.txt'$/;"	v
+input_num	main.py	/^input_num=len(input_data)$/;"	v
+load_character	loadfile.py	/^def load_character():$/;"	f
+load_pinyin	loadfile.py	/^def load_pinyin():$/;"	f
+out	main.py	/^out=prep(input_data[0])$/;"	v
+output_file	main.py	/^output_file='test.txt'$/;"	v
+pinyin_dict	predict.py	/^pinyin_dict = load_pinyin()$/;"	v
+prep	predict.py	/^def prep(input_data):$/;"	f
